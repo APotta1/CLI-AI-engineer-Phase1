@@ -18,7 +18,7 @@ response = ollama.chat(
     model="llama3.2",
     messages=[
         {
-            "role": "system",
+            "role": "system", #treat this as an instruction
             "content": (
                 "Extract information from the user's text and respond with ONLY valid JSON, "
                 "no other words. Use this exact structure: "
@@ -39,3 +39,7 @@ print("\nParsed as a Python dict")
 print(data)
 print("\nName:", data["name"])
 print("Age:", data["age"])
+
+# system message = instructions on how to answer (here: "extract info and return ONLY valid JSON in this exact structure")
+# user message = the actual content to act on (here: the paragraph about John Doe)
+# response = the model's one answer, following the system instructions, based on the user content
