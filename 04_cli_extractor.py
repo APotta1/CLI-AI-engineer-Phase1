@@ -6,6 +6,9 @@ structured data from it, and prints the result. Combines everything from
 files 1-3: a real API call, a system prompt, and JSON-constrained output.
 """
 
+#you run and control typing text commands in a terminal instead of clicking button in a window
+#called a GUI
+
 import sys
 import json
 import ollama
